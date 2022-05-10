@@ -16,9 +16,12 @@ Task 1a - Voting Age (not auto tested)
 Do the following:   
    1. Create a variable called votingAge and assign it a number value
    2. Console log true if age is 18 or higher
-
    HINT: no function required
 */
+const votingAge = 25
+if (votingAge >= 18) {
+  console.log ('true')
+}
 
 
 
@@ -30,10 +33,17 @@ Do the following:
    2. Use a conditional to check the value of the 1st variable versus the value assigned to the 2nd variable
    3. Change the value of the 1st variable if the conditional in step 2 is true
    4. Console log the value of the 1st variable
+   
 
    HINT: no function required
 */
-
+const firstThing = 'car';
+const secondThing = 'house';
+firstThing === secondThing ? true : false;
+if(firstThing === secondThing) {
+  firstThing = 'somethingElse';
+}
+console.log(firstThing)
 
 
 
@@ -48,8 +58,9 @@ Do the following:
 
    HINT: look up the Number method
 */
-
-
+let notNumber = '1999';
+Number(notNumber);
+console.log(notNumber);
 
 
 /*
@@ -60,11 +71,10 @@ Do the following:
    2. Receive the parameters: a and b
    3. Multiply a and b and return the answer
 */
-
-function multiply(/*add your code here*/){
-  /*add your code here*/
-}
-
+multiply(2, 3);
+function multiply(a, b){
+  return a * b;
+};
 
 
 /*🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 2 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀*/
@@ -76,10 +86,10 @@ Do the following:
  2. Use the received value to calculate the age in dog years (1 human year is equal to 7 dog years)
  3. Return the newly calculated age
 */
-
-function dogYears(/*add your code here*/){
-  /*add your code here*/
-}
+dogYears(12);
+function dogYears(dogAge){
+  return dogAge * 7;
+};
 
 
 
@@ -128,10 +138,25 @@ NOTE 2: This is a great time to check the tests to see what it expects, versus w
         Notice the expected and received, expected is what the test is looking for, and received is what was actually returned from this function. You can also see it's passing in two values, the number 4 and the number 1. 
         So, on this one test, the weight would be 4 pounds, and the age would be 1 years old. It's expecting your function to return a decimal number of 0.2
 */  
+hungryDog(15, 1)
+function hungryDog(weight, age){
+  if(age >= 1 && weight <= 5) {
+    return weight * .05;
+  } else if (age >= 1 && weight <= 10) {
+    return weight * .04;
+  } else if (age >=1 && weight <= 15) {
+    return weight * .03;
+  } else if (age >=1 && weight > 15) {
+    return weight * .02;
+  } else if (age >= .16 && age <= .3) {
+    return weight * .1;
+  } else if (age <= .58) {
+    return weight * .05;
+  } else if (age <= 1) {
+    return weight * .04;
+  }
+};
 
-function hungryDog(/*add your code here*/){
-  /*add your code here*/
-}
 
 
 
@@ -155,9 +180,36 @@ Use the game function below to do the following:
 
 RULES OF THE GAME: Scissors beats Paper | Paper beats Rock | Rock beats Scissors | Or there's a tie
 */
-
-function game(user, computer){
-  /*add your code here*/
+function computerChoice() {
+  const randomNumber = Math.floor(Math.random() * 3);
+  switch (randomNumber) {
+    case 0:
+      return 'rock';
+    case 1:
+      return 'paper';
+    case 2:
+      return 'scissors';
+  }
+}
+function game(userChoice, computerChoice){
+  if (userChoice === computerChoice) {
+    return "it's a tie"
+  }
+  if (userChoice === 'rock') {
+    if (computerChoice === 'paper') {
+      return 'you lose!'
+    } else return 'you win!'
+  }
+  if (userChoice === 'paper') {
+    if (computerChoice === 'scissors') {
+      return 'you lose!'
+    } else return 'you win!'
+  }
+  if (userChoice === 'scissors') {
+    if (computerChoice === 'rock') {
+      return 'you lose!'
+    } else return 'you win!'
+  }
 }
 
 
@@ -173,8 +225,9 @@ Using the miles function below do the following:
 3. Return the number of miles
 */
 
-function miles(/*add your code here*/){
-  /*add your code here*/
+function miles(kilometers){
+  let miles = kilometers * .621371;
+  return miles;  
 }
 
 
@@ -187,8 +240,8 @@ Using the feet function below do the following:
 3. Return number of feet
 */
 
-function feet(/*add your code here*/){
-  /*add your code here*/
+function feet(cm){
+  return cm / 30.48;
 }
 
 
@@ -206,9 +259,12 @@ Using the annoyingSong function below do the following:
 3. Outside of the function, Make a loop that invokes annoying song with a number that decreases until it gets to 1 bottle left. 
 4. Each time the annoyingSong is run from this loop, it should console.log the string that was returned. 
 */
-
-function annoyingSong(/*add your code here*/){
-      /*add your code here*/
+let number = 5
+function annoyingSong(number){
+      return `${number} bottles of soda on the wall, ${number} bottles of soda, take one down pass it around ${number - 1} bottles of soda on the wall`
+}
+for(let i= number; i >= 1; i--) {
+  console.log(annoyingSong(i))
 }
 
 
@@ -226,8 +282,11 @@ Using the grade function below do the following:
  60-69 should return 'you got a D'
  below should return 'you got an F'
 */
-
-function grade(/*Your Code here */){
+let score = 99
+function grade(score){
+  if (score >=90 && score <= 100) {
+    return 'you got an A'
+  } else if (score )
 /*Your Code here */
 }
 

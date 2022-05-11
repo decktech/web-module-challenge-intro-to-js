@@ -284,11 +284,18 @@ Using the grade function below do the following:
 */
 let score = 99
 function grade(score){
-  if (score >=90 && score <= 100) {
+  if (score >= 90 && score <= 100) {
     return 'you got an A'
-  } else if (score )
-/*Your Code here */
-}
+  } else if (score < 90 && score > 79) {
+    return 'you got a B'
+  } else if (score < 80 && score > 69) {
+    return 'you got a C'
+  } else if (score < 70 && score > 59) {
+    return 'you got a D'
+  } else if (score < 60) {
+    return 'you got an F'
+  }
+};
 
 
 

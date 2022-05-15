@@ -309,12 +309,34 @@ Using the vowelCounter function below do the following:
 
 HINT - you may need to study tomorrow's content on arrays 
 HINT - try looking up the .includes() method
+BETTER HINT - look up charAt() method
 */
 
 
-function vowelCounter(/*add your code here*/) {
-  /*add your code here*/
+function vowelCounter(strng) {
+  strng.toLowerCase();
+  let vowelCount = 0;
+  for (let i = 0; i < strng.length - 1; i++) {
+    if (strng[i].includes('a')) {
+      vowelCount += 1;
+    }
+    else if (strng[i].includes('e')) {
+      vowelCount += 1;
+    }
+    else if (strng[i].includes('i')) {
+      vowelCount += 1;
+    }
+    else if (strng[i].includes('o')) {
+      vowelCount += 1;
+    }
+    else if (strng[i].includes('u')) {
+      vowelCount += 1;
+    }
+  }
+  return vowelCount;
 }
+
+console.log(vowelCounter('waaaater'))
 
 
 
